@@ -1,4 +1,4 @@
-package com.thearound.ezpickup
+package com.thearound.pickup
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

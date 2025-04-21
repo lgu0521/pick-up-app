@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:850377699439:android:2d1d0c286cd54479d01d9a",
+        "mobilesdk_app_id": "1:850377699439:android:fd6e0a6d30fe731fd01d9a",
         "android_client_info": {
-          "package_name": "com.thearound.ezpickup"
+          "package_name": "com.thearound.pickup"
         }
       },
       "oauth_client": [],

@@ -1,0 +1,5 @@
+먼저 android/app/build.gradle 파일에서 versionCode 를 수정
+
+cd android && ./gradlew clean && ./gradlew bundleRelease
+
+

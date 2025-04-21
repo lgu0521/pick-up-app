@@ -1,4 +1,4 @@
-package com.thearound.ezpickup
+package com.thearound.pickup
 
 import android.app.Application
 import com.facebook.react.PackageList
