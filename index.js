@@ -9,42 +9,42 @@ import App from './App';
 import {name as appName} from './app.json';
 
 // 알림 채널 설정 (Android)
-PushNotification.createChannel(
-  {
-    channelId: "default",
-    channelName: "Default Channel",
-    channelDescription: "A default channel for notifications",
-    soundName: "notification_sound",
-    importance: 4,
-    vibrate: true,
-    playSound: true,
-  },
-  (created) => console.log(`createChannel returned '${created}'`)
-);
+// PushNotification.createChannel(
+//   {
+//     channelId: "default",
+//     channelName: "Default Channel",
+//     channelDescription: "A default channel for notifications",
+//     soundName: "notification_sound",
+//     importance: 4,
+//     vibrate: true,
+//     playSound: true,
+//   },
+//   (created) => console.log(`createChannel returned '${created}'`)
+// );
 
-// 알림 설정
-PushNotification.configure({
-  onNotification: function (notification) {
-    console.log("NOTIFICATION:", notification);
-  },
-  requestPermissions: Platform.OS === 'ios',
-  popInitialNotification: true,
-  soundName: 'notification_sound.mp3',
-});
-
-// Register background handler
-// messaging().setBackgroundMessageHandler(async remoteMessage => {
-//     console.log('백그라운드에서 메시지가 처리되었습니다!', remoteMessage);
+// // 알림 설정
+// PushNotification.configure({
+//   onNotification: function (notification) {
+//     console.log("NOTIFICATION:", notification);
+//   },
+//   requestPermissions: Platform.OS === 'ios',
+//   popInitialNotification: true,
+//   soundName: 'notification_sound.mp3',
 // });
 
-// iOS 전용 설정
-if (Platform.OS === 'ios') {
-    messaging().setForegroundNotificationPresentationOptions({
-        alert: true,
-        badge: true,
-        sound: true,
-    });
-}
+// // Register background handler
+// // messaging().setBackgroundMessageHandler(async remoteMessage => {
+// //     console.log('백그라운드에서 메시지가 처리되었습니다!', remoteMessage);
+// // });
+
+// // iOS 전용 설정
+// if (Platform.OS === 'ios') {
+//     messaging().setForegroundNotificationPresentationOptions({
+//         alert: true,
+//         badge: true,
+//         sound: true,
+//     });
+// }
 
 // 백그라운드 실행 여부 확인을 위한 컴포넌트
 function HeadlessCheck({ isHeadless }) {
